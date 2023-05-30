@@ -26,13 +26,14 @@ const Password = () => {
           <InstructionContainer type="비밀번호" />
         </div>
         <div className="grid grid-cols-4 grid-lows-4 grid-flow-row gap-5 place-items-center">
-          {pwBoardList.map((e) => (
+          {pwBoardList.map((e, i) => (
             <PwBtn
+              key={e + "번" + i}
               text={e}
               onClick={() => {
                 if (e !== "*") {
+                  setPw(pw + e);
                 }
-                setPw(pw + e);
               }}
             />
           ))}
