@@ -64,7 +64,7 @@ const Main = () => {
           <MenuBtn
             key={e + i}
             text={e}
-            disabled={e !== "예금인출" ?? true}
+            disabled={e !== "예금인출" ? true : false}
             onClick={(e) => {
               handleStartWithdraw(e);
             }}
