@@ -1,9 +1,13 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { ATMLayout } from "../components/templates/ATMLayout";
+import { ATMLayout } from "@components/templates/ATMLayout";
 import ProgressCircles from "@components/organisms/ProgressCircles";
 import { Fragment } from "react";
+import { customerInfoState } from "../recoil/customer";
+import { useRecoilValue } from "recoil";
+import axios from "axios";
 
 const Processing = () => {
+  const customerInfo = useRecoilValue(customerInfoState);
   const navigate = useNavigate();
   const location = useLocation();
   const state = location.state as { type: string };
@@ -11,14 +15,26 @@ const Processing = () => {
 
   setTimeout(() => {
     if (type === "거래처리") {
-      // [TODO] 50만원 미만이면 안뜸
-      navigate("/warning");
+      const params = { customerId: customerInfo.customerId };
+      axios
+        .get<boolean>(
+          `${process.env.REACT_APP_BE_API_END_POINT}/customer/victim`,
+          { params }
+        )
+        .then((res) => {
+          if (res.data === true) {
+            navigate("/warning");
+          } else {
+            navigate("/notification", { state: { type: "현금수취" } });
+          }
+        });
     } else if (type === "현금수취") {
       navigate("/notification", { state: { type: "현금수취" } });
     } else if (type === "전화연결") {
       navigate("/notification", { state: { type: "전화연결" } });
     }
   }, 4000);
+
   return (
     <ATMLayout>
       <div className="bg-white rounded-lg p-2 h-1/3 my-12 w-2/3">
