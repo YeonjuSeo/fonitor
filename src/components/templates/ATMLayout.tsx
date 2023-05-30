@@ -56,6 +56,13 @@ export const ATMLayout = ({ children }: ATMLayoutProps) => {
     }
   }, [setIsCapturing, handleDataAvailable]);
 
+  const handleStopCaptureClick = React.useCallback(() => {
+    if (mediaRecorderRef.current) {
+      mediaRecorderRef.current!.stop();
+    }
+    setIsCapturing(false);
+  }, [mediaRecorderRef, webcamRef, setIsCapturing]);
+
   const handleDownload = React.useCallback(() => {
     if (recordedChunks.length) {
       const blob = new Blob(recordedChunks, {
