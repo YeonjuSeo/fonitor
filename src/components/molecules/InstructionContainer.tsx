@@ -1,6 +1,4 @@
-import React, { MouseEventHandler } from "react";
-import { MdOutlineAdminPanelSettings } from "react-icons/md";
-import { FiUser } from "react-icons/fi";
+import React from "react";
 import RedTxtEmphasis from "@components/atoms/RedTxtEmphasis";
 import TextEmbeddedBtn from "@components/atoms/TextEmbeddedBtn";
 const InstructionContainer = ({ type }: InstructionContainerType) => {
