@@ -1,46 +1,53 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 🎥 Live Service
 
-In the project directory, you can run:
+[https://www.studeep.com](https://www.studeep.com/)
 
-### `yarn start`
+## **✈️ Tech stacks**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### **Core**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- React 18
+- TypeScript
+- Recoil
+- React Router
+- Local Storage
+- react-webcam
 
-### `yarn test`
+### Data Fetching
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Axios for using RESTful API
 
-### `yarn build`
+### **Styling**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- TailwindCSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **Code Linting**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ESLint
+- Prettier
 
-### `yarn eject`
+### **CI**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Vercel
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## **🛰 Features**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Warnings — Machine Learning
+<div display="flex" align="center">
+    <img src="https://github.com/YeonjuSeo/fonitor/assets/56028436/fde9e36f-4d11-407a-aae3-7a44513ba79d" />
+    <img src="https://github.com/YeonjuSeo/fonitor/assets/56028436/fde9e36f-4d11-407a-aae3-7a44513ba79d" />
+    <img src="https://github.com/YeonjuSeo/fonitor/assets/56028436/fde9e36f-4d11-407a-aae3-7a44513ba79d" />
+</div>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Through the withdraw process, camaera will take pictures of you. When you submit your password, our server analyzes your debits and status including emotions and print the result. If you are decided as victim, you will get some alerts like the above.
 
-## Learn More
+It uses **Object Detection** technology to recognize your smartphone and verify that you are using it.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+And through **Emotion Recognition** technology, it can analyze the user's emotions including body gesture, facial expressions and scene context.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Monitoring
+<img width="646" alt="스크린샷 2023-06-09 15 11 12" src="https://github.com/YeonjuSeo/fonitor/assets/56028436/91cff71f-1c14-4b3d-86bf-3a9c292cd0a7">
+
+We visualize the analysis results as a chart.
